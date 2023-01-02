@@ -1,0 +1,125 @@
+@import "mixins";
+.main-flex {
+    width: 100%;
+    margin: 0%; padding: 0%;
+    background: url("../assets/trama.png");
+}
+//header
+.header-flex {
+    @include flex-row-center;
+}
+//logo
+#logo {
+    min-width: 280px;
+    max-width: 550px;
+    flex-wrap: nowrap;
+}
+@media screen and (min-width: 768px) {
+    #logo {
+    min-width: 450px;
+    }
+}
+.containerLogo {
+    @include flex-row-center;
+    width:100%;
+}
+//Carousel
+.indexSlide {
+    margin:0%;
+    padding: 0px;
+    @include flex-row-center;
+}
+#carouselIndex {
+    @include flex-row-center;
+    align-items: center;
+}
+.carousel-item, .carousel-inner {
+    @include centrar;
+    max-width: 500px;
+    max-height: 700px;
+    padding: 5%;
+}
+.carousel-inner img {
+    margin: auto;
+    width: 100%;
+    border-radius: 5%;
+}
+@media screen and (min-width: 768px) {
+    .carousel-inner img {
+        min-width: 600px;
+        min-height: 399px;
+    }
+    .carousel-inner {
+        min-width: 700px;
+        min-height: 466px
+    }
+}
+//Reseña
+.resena {
+    @include flex-row-space;
+    background-color: rgb(9, 24, 61);
+    max-width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#textoResena {
+    @include centrar;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    //color: rgb (192, 126, 42);
+}
+//Contenedor del Medio e imagenes
+.medio {
+    position: relative;
+    top: 5%;
+    padding: 4%;
+    @include flex-row-center;
+}
+.animada {
+    flex-wrap: wrap;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+//Zoom del hover de la imagen del menú
+#menucartaPagina1:hover {
+    transform: scale(1,2);
+    min-width: 420px;
+}
+#menucartaPagina2:hover {
+    transform: scale(1,2);
+    min-width: 420px;
+}
+.imagen, .imggaleria {
+    margin: 40px;
+    border-radius: 5%;
+}
+#platoentremenu, #menucartaPagina1, #menucartaPagina2, #cafeentremenu {
+border-radius: 5%;
+}
+
+@media screen and (min-width: 900px) {
+    .imagen {@include flex-row-space;
+        margin: 70px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+//Contacto al final de la página
+.contacto {
+    width: 100%; height: 50%;
+    margin: 0%; padding: 0%;
+    @include flex-row-space;
+    background: url("../assets/trama.png");
+}
+//Íconos finales
+#iconosFinales {
+    margin: 8px;
+}
+//Contenedor de galería
+.galeria {
+    position: relative;
+    top: 5%;
+    padding: 4%;
+    @include flex-row-center;
+}
